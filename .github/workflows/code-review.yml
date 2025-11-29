@@ -1,0 +1,19 @@
+name: AI Code Review
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: AI Review with Claude
+        uses: cozymaple/ai-code-review-action@v1
+        with:
+          github_token: ${{  }}
+          openai_api_key: ${{ secrets.CLAUDE_API_KEY }}  # or OPENAI_API_KEY
+          model: claude-3-5-sonnet-20241022
+          exclude: "**/*.json,**/db.json"
