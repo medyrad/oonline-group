@@ -4,6 +4,7 @@ import "./globals.css";
 import { i18n } from "@/lib/i18n-config";
 import { dir } from "i18next";
 import type { ReactNode } from "react";
+import { AppProviders } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
   return (
     <html lang={locale} dir={dir(locale)}>
-      <body className={`${inter.className} antialiased bg-gray-50`}>{children}</body>
+      <body className={`${inter.className} antialiased bg-gray-50`}>
+        <AppProviders>{children}</AppProviders>
+      </body>
     </html>
   );
 }

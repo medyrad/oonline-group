@@ -1,5 +1,6 @@
 import { describe, expect, it } from "@jest/globals";
-import { cn } from "../src/lib/utils";
+
+import { cn } from "../../../src/lib/utils";
 
 describe("cn utility", () => {
   it("merges tailwind classes predictably", () => {

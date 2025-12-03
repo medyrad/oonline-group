@@ -1,5 +1,3 @@
-#!/usr/bin/env bun
-
 import { Server } from "socket.io";
 
 const io = new Server(4001, {

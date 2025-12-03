@@ -1,8 +1,8 @@
 import { describe, expect, it } from "@jest/globals";
 import { render, screen } from "@testing-library/react";
-
 import React from "react";
-import { Button } from "../src/components/ui/button";
+
+import { Button } from "../../../../src/components/ui/button";
 
 describe("<Button />", () => {
   it("renders a native button by default", () => {

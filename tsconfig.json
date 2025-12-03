@@ -20,8 +20,27 @@
     "exactOptionalPropertyTypes": true,
     "noPropertyAccessFromIndexSignature": true,
     "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@/components": ["src/components"],
+      "@/components/*": ["src/components/*"],
+      "@/hooks": ["src/hooks"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/lib": ["src/lib"],
+      "@/lib/*": ["src/lib/*"],
+      "@/store": ["src/store"],
+      "@/store/*": ["src/store/*"],
+      "@/services": ["src/services"],
+      "@/services/*": ["src/services/*"],
+      "@/types": ["src/types"],
+      "@/types/*": ["src/types/*"],
+      "@/features": ["src/features"],
+      "@/features/*": ["src/features/*"],
+      "@/config": ["src/config"],
+      "@/config/*": ["src/config/*"],
+      "@/mocks": ["src/mocks"],
+      "@/mocks/*": ["src/mocks/*"]
     },
     "plugins": [
       {

@@ -1,8 +1,14 @@
 import { describe, expect, it } from "@jest/globals";
 import { render, screen } from "@testing-library/react";
-
 import React from "react";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../src/components/ui/card";
+
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../../../../src/components/ui/card";
 
 describe("<Card /> compound components", () => {
   it("renders structural slots", () => {
