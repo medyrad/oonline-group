@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { dir } from "i18next";
 import { i18n } from "@/lib/i18n-config";
-import { ReactNode } from "react";
+import { dir } from "i18next";
+import type { ReactNode } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const locale = i18n.defaultLocale;
+
   return (
-    <html lang={i18n.language} dir={dir(i18n.language)}>
-      <body className={`${inter.className} antialiased bg-gray-50`}>
-        {children}
-      </body>
+    <html lang={locale} dir={dir(locale)}>
+      <body className={`${inter.className} antialiased bg-gray-50`}>{children}</body>
     </html>
   );
 }
